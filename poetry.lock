@@ -114,6 +114,17 @@ files = [
 test = ["pytest (>=6)"]
 
 [[package]]
+name = "fnvhash"
+version = "0.1.0"
+description = "Pure Python FNV hash implementation"
+category = "main"
+optional = false
+python-versions = "*"
+files = [
+    {file = "fnvhash-0.1.0.tar.gz", hash = "sha256:3e82d505054f9f3987b2b5b649f7e7b6f48349f6af8a1b8e4d66779699c85a8e"},
+]
+
+[[package]]
 name = "importlib-metadata"
 version = "6.1.0"
 description = "Read metadata from Python packages"
@@ -264,4 +275,4 @@ testing = ["big-O", "flake8 (<5)", "jaraco.functools", "jaraco.itertools", "more
 [metadata]
 lock-version = "2.0"
 python-versions = "^3.7"
-content-hash = "c79353b6b4653bbf66b8cfa73c2fc2f169fc0b7866e18ec707b9ae82839b3d0b"
+content-hash = "e2f17ab62fdaeb143dece1a953039d473b33d2c90a59cbe71a5a1b8ebfb812f3"
