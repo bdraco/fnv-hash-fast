@@ -1,0 +1,19 @@
+# Changes here will be overwritten by Copier
+_commit: 0314391
+_src_path: gh:browniebroke/pypackage-template
+add_me_as_contributor: false
+copyright_year: '2023'
+documentation: false
+email: nick@koston.org
+full_name: J. Nick Koston
+github_username: bdraco
+initial_commit: true
+open_source_license: MIT
+package_name: fnv_hash_fast
+project_name: FNV Hash Fast
+project_short_description: A fast version of fnv1a
+project_slug: fnv-hash-fast
+run_poetry_install: true
+setup_github: true
+setup_pre_commit: true
+
