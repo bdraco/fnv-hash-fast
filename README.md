@@ -29,11 +29,23 @@
 
 A fast version of fnv1a
 
+This library will use a CPP implementation of fnv1a (32) if cython is available, and will fallback to pure python from the fnvhash package if it is not.
+
 ## Installation
 
 Install this via pip (or your favourite package manager):
 
 `pip install fnv-hash-fast`
+
+## Example
+
+```python
+>>> import fnv_hash_fast
+>>> fnv_hash_fast.fnv1a_32(b"hello")
+1335831723
+>>> fnv_hash_fast.fnv1a_32(b"goodbye")
+1188507472
+```
 
 ## Contributors ✨
 
