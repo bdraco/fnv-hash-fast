@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v0.4.0 (2023-07-24)
+
+### Feature
+
+* Initial cpython 3.12 support ([#6](https://github.com/bdraco/fnv-hash-fast/issues/6)) ([`a1e00ad`](https://github.com/bdraco/fnv-hash-fast/commit/a1e00ad742891603edee784d499da0c20808d3b9))
+
 ## v0.3.1 (2023-04-04)
 ### Fix
 * Ensure conversion is unsigned ([#5](https://github.com/bdraco/fnv-hash-fast/issues/5)) ([`7389859`](https://github.com/bdraco/fnv-hash-fast/commit/73898596872311b5a37f474fad4edf0a9a7aa5e7))
