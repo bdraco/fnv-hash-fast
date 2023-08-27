@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v0.4.1 (2023-08-27)
+
+### Fix
+
+* Rebuild wheels with cython 3.0.2 ([#7](https://github.com/bdraco/fnv-hash-fast/issues/7)) ([`2feb469`](https://github.com/bdraco/fnv-hash-fast/commit/2feb469e334b4541ea275fee8e60edda72c02a32))
+
 ## v0.4.0 (2023-07-24)
 
 ### Feature
