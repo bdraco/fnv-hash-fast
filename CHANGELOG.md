@@ -2,6 +2,16 @@
 
 <!--next-version-placeholder-->
 
+## v0.5.0 (2023-10-18)
+
+### Feature
+
+* Build wheel for latest cpython release ([#8](https://github.com/bdraco/fnv-hash-fast/issues/8)) ([`5bda2cb`](https://github.com/bdraco/fnv-hash-fast/commit/5bda2cbccd2bdb01ca61f885e2b1f6b3f39ca4c6))
+
+### Fix
+
+* Reduce size of wheels by excluding generated .cpp files ([#9](https://github.com/bdraco/fnv-hash-fast/issues/9)) ([`efc8960`](https://github.com/bdraco/fnv-hash-fast/commit/efc896027b7b7d4e6b8d41c4f4c5deb0f5128405))
+
 ## v0.4.1 (2023-08-27)
 
 ### Fix

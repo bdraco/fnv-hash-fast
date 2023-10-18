@@ -1,6 +1,6 @@
 [tool.poetry]
 name = "fnv-hash-fast"
-version = "0.4.1"
+version = "0.5.0"
 description = "A fast version of fnv1a"
 authors = ["J. Nick Koston <nick@koston.org>"]
 license = "MIT"
