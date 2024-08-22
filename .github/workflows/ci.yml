@@ -39,6 +39,7 @@ jobs:
           - "3.10"
           - "3.11"
           - "3.12"
+          - "3.13"
 
         os:
           - ubuntu-latest
@@ -50,9 +51,10 @@ jobs:
     steps:
       - uses: actions/checkout@v3
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: ${{ matrix.python-version }}
+          allow-prereleases: true
       - uses: snok/install-poetry@v1.3.3
       - name: Install Dependencies
         run: |
@@ -140,7 +142,7 @@ jobs:
 
       # Used to host cibuildwheel
       - name: Set up Python
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: "3.10"
 
@@ -159,7 +161,7 @@ jobs:
           fetch-depth: 0
 
       - name: Install cibuildwheel
-        run: python -m pip install cibuildwheel==2.16.2
+        run: python -m pip install cibuildwheel==2.20.0
 
       - name: Build wheels
         run: python -m cibuildwheel --output-dir wheelhouse
