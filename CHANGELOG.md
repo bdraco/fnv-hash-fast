@@ -2,6 +2,16 @@
 
 <!--next-version-placeholder-->
 
+## v0.6.0 (2024-08-22)
+
+### Feature
+
+* Python 3.13 support ([#17](https://github.com/bdraco/fnv-hash-fast/issues/17)) ([`b808ad1`](https://github.com/bdraco/fnv-hash-fast/commit/b808ad166c49f8eef13c6b477bc4c0dda57dc1d8))
+
+### Fix
+
+* Bump pre-commit action to 3.0.1 ([#18](https://github.com/bdraco/fnv-hash-fast/issues/18)) ([`26c2026`](https://github.com/bdraco/fnv-hash-fast/commit/26c20267232ce4bceb4656d4547d89b9145c5e54))
+
 ## v0.5.0 (2023-10-18)
 
 ### Feature
