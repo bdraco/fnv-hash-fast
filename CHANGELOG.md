@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v0.6.1 (2024-08-22)
+
+### Fix
+
+* Wheel builds ([#20](https://github.com/bdraco/fnv-hash-fast/issues/20)) ([`960b0dd`](https://github.com/bdraco/fnv-hash-fast/commit/960b0dd37d314e6a98bb76eb4a9a2b33fd620de6))
+
 ## v0.6.0 (2024-08-22)
 
 ### Feature
