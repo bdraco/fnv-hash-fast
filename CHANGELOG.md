@@ -2,6 +2,16 @@
 
 <!--next-version-placeholder-->
 
+## v1.0.0 (2024-08-22)
+
+### Feature
+
+* Drop python 3.10 support ([#19](https://github.com/bdraco/fnv-hash-fast/issues/19)) ([`c89114d`](https://github.com/bdraco/fnv-hash-fast/commit/c89114d8b63f8d4085d14ae43387f3ffa6be829a))
+
+### Breaking
+
+* drop python 3.10 support ([#19](https://github.com/bdraco/fnv-hash-fast/issues/19)) ([`c89114d`](https://github.com/bdraco/fnv-hash-fast/commit/c89114d8b63f8d4085d14ae43387f3ffa6be829a))
+
 ## v0.6.1 (2024-08-22)
 
 ### Fix
