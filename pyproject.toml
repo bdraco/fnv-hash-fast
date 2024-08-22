@@ -7,11 +7,15 @@ license = "MIT"
 readme = "README.md"
 repository = "https://github.com/bdraco/fnv-hash-fast"
 classifiers = [
-    "Development Status :: 2 - Pre-Alpha",
+    "Development Status :: 5 - Production/Stable",
     "Intended Audience :: Developers",
     "Natural Language :: English",
     "Operating System :: OS Independent",
     "Topic :: Software Development :: Libraries",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+    "Programming Language :: Python :: 3.13",
 ]
 packages = [
     { include = "fnv_hash_fast", from = "src" },
@@ -26,7 +30,7 @@ script = "build_ext.py"
 "Changelog" = "https://github.com/bdraco/fnv-hash-fast/blob/main/CHANGELOG.md"
 
 [tool.poetry.dependencies]
-python = "^3.7"
+python = "^3.10"
 fnvhash = "^0.1.0"
 
 [tool.poetry.group.dev.dependencies]
