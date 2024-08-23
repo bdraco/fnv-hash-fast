@@ -129,7 +129,7 @@ jobs:
     strategy:
       matrix:
         os:
-          - macos-lastest
+          - macos-latest
           - ubuntu-latest
           - windows-latest
 
