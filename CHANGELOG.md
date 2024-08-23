@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v1.0.1 (2024-08-23)
+
+### Fix
+
+* Re-release since github actions failed ([#21](https://github.com/bdraco/fnv-hash-fast/issues/21)) ([`7a5f7c2`](https://github.com/bdraco/fnv-hash-fast/commit/7a5f7c2637fe63dcba4c2f40f26be4c334ba7e7a))
+
 ## v1.0.0 (2024-08-22)
 
 ### Feature
