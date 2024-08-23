@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v1.0.2 (2024-08-23)
+
+### Fix
+
+* Typo in release CI that prevented release from working on macos ([#22](https://github.com/bdraco/fnv-hash-fast/issues/22)) ([`d5f97e1`](https://github.com/bdraco/fnv-hash-fast/commit/d5f97e13e10a756fa5883c71466060663eb82a32))
+
 ## v1.0.1 (2024-08-23)
 
 ### Fix
