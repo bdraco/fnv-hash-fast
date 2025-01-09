@@ -19,6 +19,7 @@ classifiers = [
 packages = [
     { include = "fnv_hash_fast", from = "src" },
 ]
+exclude = [ "**/*.c" ]
 
 [tool.poetry.build]
 generate-setup-file = true
