@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v1.1.0 (2025-01-09)
+
+### Feature
+
+* Rewrite hash function in C to improve performance ([#30](https://github.com/bdraco/fnv-hash-fast/issues/30)) ([`70eedee`](https://github.com/bdraco/fnv-hash-fast/commit/70eedee39a46c551b6247c9a85d7d6d88ad6859c))
+
 ## v1.0.2 (2024-08-23)
 
 ### Fix
