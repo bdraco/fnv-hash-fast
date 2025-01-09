@@ -15,7 +15,7 @@ ulid_module = Extension(
     [
         join("src", "fnv_hash_fast", "_fnv_impl.pyx"),
     ],
-    language="c++",
+    language="c",
 )
 
 
@@ -45,7 +45,7 @@ def build(setup_kwargs: Any) -> None:
             )
         )
         setup_kwargs["exclude_package_data"] = {
-            pkg: ["*.cpp"] for pkg in setup_kwargs["packages"]
+            pkg: ["*.c"] for pkg in setup_kwargs["packages"]
         }
     except Exception:
         if os.environ.get("REQUIRE_CYTHON"):

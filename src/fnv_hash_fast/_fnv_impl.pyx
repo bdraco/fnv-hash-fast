@@ -1,11 +1,10 @@
-# distutils: language = c++
-from libcpp.string cimport string
+# distutils: language = c
 
 import cython
 
 
 cdef extern from "fnv_wrapper.h":
-    cython.uint _cpp_fnv1a_32(string data)
+    unsigned int _c_fnv1a_32(const unsigned char *data)
 
 def _fnv1a_32(data: bytes) -> int:
-    return _cpp_fnv1a_32(data)
+    return _c_fnv1a_32(data)
