@@ -14,8 +14,8 @@ jobs:
   lint:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
-      - uses: actions/setup-python@v4
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
       - uses: pre-commit/action@v3.0.1
@@ -26,7 +26,7 @@ jobs:
     name: Lint Commit Messages
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
       - uses: wagoid/commitlint-github-action@v5.3.1
@@ -76,7 +76,7 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - name: Setup Python 3.12
-        uses: actions/setup-python@v4
+        uses: actions/setup-python@v5
         with:
           python-version: 3.12
       - uses: snok/install-poetry@v1.3.4
@@ -94,7 +94,7 @@ jobs:
     name: "Test on 32-bit Alpine Linux"
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
       - name: Setup Alpine Linux v3.18 for x86
         uses: jirutka/setup-alpine@v1
         with:
@@ -116,6 +116,8 @@ jobs:
   release:
     runs-on: ubuntu-latest
     environment: release
+    outputs:
+      newest_release_tag: ${{ steps.release_tag.outputs.newest_release_tag }}
     if: github.ref == 'refs/heads/main'
     needs:
       - test
@@ -124,7 +126,7 @@ jobs:
       - commitlint
 
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
@@ -139,6 +141,12 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           pypi_token: ${{ secrets.PYPI_TOKEN }}
+
+      - name: Get Release Tag
+        id: release_tag
+        shell: bash
+        run: |
+          echo "newest_release_tag=$(semantic-release print-version --current)" >> $GITHUB_OUTPUT
 
   build_wheels:
     needs: [release]
@@ -159,30 +167,16 @@ jobs:
           - os: macos-latest
             musl: "musllinux"
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@v4
         with:
+          ref: "v${{ needs.release.outputs.newest_release_tag }}"
           fetch-depth: 0
-          ref: "main"
 
       # Used to host cibuildwheel
       - name: Set up Python
         uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-
-      - name: Install python-semantic-release
-        run: python3 -m pip install python-semantic-release==7.34.6
-
-      - name: Get Release Tag
-        id: release_tag
-        shell: bash
-        run: |
-          echo "::set-output name=newest_release_tag::$(semantic-release print-version --current)"
-
-      - uses: actions/checkout@v3
-        with:
-          ref: "v${{ steps.release_tag.outputs.newest_release_tag }}"
-          fetch-depth: 0
 
       - name: Install cibuildwheel
         run: python -m pip install cibuildwheel==2.22.0
