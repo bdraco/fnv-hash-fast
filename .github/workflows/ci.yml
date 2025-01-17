@@ -148,10 +148,16 @@ jobs:
     strategy:
       matrix:
         os:
+          - ubuntu-24.04-arm
           - macos-latest
           - ubuntu-latest
           - windows-latest
-
+        musl: ["", "musllinux"]
+        exclude:
+          - os: windows-latest
+            musl: "musllinux"
+          - os: macos-latest
+            musl: "musllinux"
     steps:
       - uses: actions/checkout@v3
         with:
@@ -185,10 +191,11 @@ jobs:
         run: python -m cibuildwheel --output-dir wheelhouse
         # to supply options, put them in 'env', like:
         env:
-          CIBW_SKIP: cp36-* cp37-* cp38-* cp39-* cp310-* pp36-* pp37-* pp38-* pp39-* pp310-*
+          CIBW_SKIP: cp36-* cp37-* cp38-* cp39-* cp310-* pp36-* pp37-* pp38-* pp39-* pp310-* ${{ matrix.musl == 'musllinux' && '*manylinux*' || '*musllinux*' }}
           CIBW_BEFORE_ALL_LINUX: apt-get install -y gcc || yum install -y gcc || apk add gcc
           CIBW_BUILD_VERBOSITY: 3
           REQUIRE_CYTHON: 1
+          CIBW_ARCHS_LINUX: ${{ matrix.os == 'ubuntu-24.04-arm' && 'aarch64' || 'auto' }}
 
       - uses: actions/upload-artifact@v3
         with:
