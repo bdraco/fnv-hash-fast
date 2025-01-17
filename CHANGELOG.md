@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v1.2.2 (2025-01-17)
+
+### Fix
+
+* Fix fetching the release tag during build ([#33](https://github.com/bdraco/fnv-hash-fast/issues/33)) ([`4dd5baa`](https://github.com/bdraco/fnv-hash-fast/commit/4dd5baaf48b8a6afb6d90dc3ce4baba89a48de34))
+
 ## v1.2.1 (2025-01-17)
 
 ### Fix
