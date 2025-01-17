@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v1.2.1 (2025-01-17)
+
+### Fix
+
+* Update workflow to fix release process and wheel builds ([#32](https://github.com/bdraco/fnv-hash-fast/issues/32)) ([`dc796f3`](https://github.com/bdraco/fnv-hash-fast/commit/dc796f355f7e3d9b7dbb6dbf4226a22790e549e8))
+
 ## v1.2.0 (2025-01-17)
 
 ### Feature
