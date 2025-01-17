@@ -2,6 +2,12 @@
 
 <!--next-version-placeholder-->
 
+## v1.2.0 (2025-01-17)
+
+### Feature
+
+* Add aarch64 wheels via native arm runners ([#31](https://github.com/bdraco/fnv-hash-fast/issues/31)) ([`ffa9e43`](https://github.com/bdraco/fnv-hash-fast/commit/ffa9e43979374e78132f9f8867cd91fa98109050))
+
 ## v1.1.0 (2025-01-09)
 
 ### Feature
